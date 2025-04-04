@@ -71,7 +71,7 @@ def scrape(username, max_videos, output_dir):
     responses = {}  # Limpa os vídeos antes de iniciar um novo usuário
 
     with sync_playwright() as pw:
-        browser = pw.chromium.launch(headless=True)
+        browser = pw.chromium.launch(headless=False)
         page = browser.new_page()
 
         try:
